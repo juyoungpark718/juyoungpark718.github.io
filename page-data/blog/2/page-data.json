@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-blog-list-template-js","path":"/blog/2","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"fields":{"slug":"/post1/"},"frontmatter":{"title":"블로그 시작!","path":"/posts/1","date":"2019-05-11"}}}]}},"pageContext":{"limit":6,"skip":6,"numPages":2,"currentPage":2}}}
