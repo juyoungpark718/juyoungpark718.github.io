@@ -88,6 +88,16 @@ ex) 완성해야 하는 이름이 세 글자면 AAA, 네 글자면 AAAA</p>
 </tbody>
 </table>
 </blockquote>
+<h3>문제 풀이</h3>
+<ol>
+<li>다음알파벳의 차이를 알기 위해서 alpha 배열을 전역변수로 두고, getDiff 함수를 만들어 준다.(13을 기준으로 앞에서, 뒤에서 계산)</li>
+<li>name문자열을 배열로 만듦</li>
+<li>answer에 각 문자열의 Diff를 더함.</li>
+<li>min은 되돌아갔을때와, 그냥 갔을때 중 최솟값을 저장.</li>
+<li>A가 연속으로 나오는 idx를 선언.</li>
+<li>move값을 구해줌.</li>
+<li>move와 min중 최솟값을 min으로 선택.</li>
+</ol>
 <div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> alpha <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token string">"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">solution</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
