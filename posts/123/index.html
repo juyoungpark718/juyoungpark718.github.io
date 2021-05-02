@@ -68,7 +68,7 @@ data-styled.g21[id="blogTemplate__BlogComment-sc-1iw0vk6-7"]{content:"hFhICi,"}/
 </ol>
 </li>
 <li>
-<p>totalTime[i-1] += totalTime[i-1]을 playtime까지 for문을 돌려준다.</p>
+<p>totalTime[i] += totalTime[i-1]을 playtime까지 for문을 돌려준다.</p>
 <ol>
 <li>
 <p>logs배열로 시청자들의 재생 시작 시간, 재생 끝나는 시간을 표시했으므로 totalTime[i] += totalTime[i-1]을 돌리면 해당 구간에서 재생한 시청자 수가 나온다.</p>
@@ -85,12 +85,12 @@ data-styled.g21[id="blogTemplate__BlogComment-sc-1iw0vk6-7"]{content:"hFhICi,"}/
 </ol>
 </li>
 <li>
-<p>한번 더 totalTime[i-1] += totalTime[i-1]을 playtime까지 for문을 돌려준다.(누적합)</p>
+<p>한번 더 totalTime[i] += totalTime[i-1]을 playtime까지 for문을 돌려준다.(누적합)</p>
 <ol>
 <li>광고 구간에 대한 누적 재생시간을 알기 위해서 for문을 한번 더 돌린다.</li>
 </ol>
 </li>
-<li>구한 누적합을 바탕으로, 0~playtime-adtime까지 for문을 돌리면서, i~adTime+1을 광고 구간으로 두고 누적합이 가장 큰 경우를 찾으면 된다.</li>
+<li>구한 누적합을 바탕으로, 0~playtime-adtime까지 for문을 돌리면서, i~adTime+i을 광고 구간으로 두고 누적합이 가장 큰 경우를 찾으면 된다.</li>
 </ol>
 <h4>구한 시작 지점에 +1를 하는 이유?</h4>
 <pre>

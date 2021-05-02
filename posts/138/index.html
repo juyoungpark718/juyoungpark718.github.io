@@ -109,7 +109,7 @@ data-styled.g21[id="blogTemplate__BlogComment-sc-1iw0vk6-7"]{content:"hFhICi,"}/
 <td></td>
 </tr>
 <tr>
-<td>componentDidMout</td>
+<td>componentDidMount</td>
 <td></td>
 <td></td>
 </tr>
@@ -119,7 +119,7 @@ data-styled.g21[id="blogTemplate__BlogComment-sc-1iw0vk6-7"]{content:"hFhICi,"}/
 <ul>
 <li>리액트에게 컴포넌트가 렌더링 이후에 어떤 일을 수행하게 하는 훅</li>
 <li>DOM 업데이트를 수행한 이후에 불러와서 실행</li>
-<li>componentDidMout, componentDidUpdate, componentWillUnmount 3가지가 합쳐진 것이라고 생각해도 무방</li>
+<li>componentDidMount, componentDidUpdate, componentWillUnmount 3가지가 합쳐진 것이라고 생각해도 무방</li>
 </ul>
 <h4>useEffect를 이용한 간단한 Counter</h4>
 <p>간단한 카운터를 생각해보자, count state를 두고 setTimeout으로 count를 증가시킨다.</p>
@@ -173,7 +173,7 @@ data-styled.g21[id="blogTemplate__BlogComment-sc-1iw0vk6-7"]{content:"hFhICi,"}/
 위의 코드에서 deps 배열에 count값을 주고 리렌더링이 될 때마다 useEffect의 리턴값의 함수가 실행된다.<br>
 마운트가 해제될 때 실행되야하는데 count의 값이 바뀔때마다 리렌더링 된다는 것이다.  </p>
 <p>공식 문서에 따르면, componentDidMount, componentWillUnmount만 사용하면 버그가 생길 수 있다는 것이다.
-componentDidMount에서 사용한 props와 componentWillUmount에서 사용한 props가 다를 수 있다는 점을 예제로 들어 설명한다.(클래스형 컴포넌트)<br>
+componentDidMount에서 사용한 props와 componentWillUnmount에서 사용한 props가 다를 수 있다는 점을 예제로 들어 설명한다.(클래스형 컴포넌트)<br>
 그래서 우리는 componentDidUpdate에서 바뀐 것이 있는지 확인해야한다. 이 과정을 합쳐놓은 것이 useEffect이기 때문에 return 값의 함수가 dep에 따라,<br>
 실행되는 것이다.(자세한 내용은 공식문서를 읽는 것을 추천). 그래서 사실 useEffect의 return 값은 componentDidUpdate, componentWillUnmount 두 가지 경우에 실행된다.</p>
 <h2>useEffect를 사용하는데 있어서 네 가지의 팁</h2>
